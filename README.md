@@ -26,7 +26,7 @@ Since July 2025, VAPD has powered Sangfor Technologies' production XDR through f
 - [`docs/evaluation.md`](docs/evaluation.md) — Evaluation protocol and metrics
 - [`docs/additional_results.md`](docs/additional_results.md) — Supplementary experimental results (Mistral-4.5B variant)
 - [`docs/medical_evaluation.md`](docs/medical_evaluation.md) — Cross-domain evaluation on MLEC-QA
-- [`docs/deployment.md`](docs/deployment.md) *(coming soon)* — Production deployment details
+- [`docs/deployment.md`](docs/deployment.md) — Production deployment details
 
 ### Case Studies
 - [`case_studies/vapd_vs_baseline.md`](case_studies/vapd_vs_baseline.md) — Qualitative comparison: VAPD vs. CPT+SFT vs. SFT on a Command Injection instance
