@@ -1,6 +1,6 @@
 # VAPD: Vertical-Adapted Pruning and Distillation
 
-> Official repository for the CIKM 2026 paper  
+> Official repository for the paper  
 > **"From One to Many: Efficient Production and Deployment of Vertical LLM Families via Pruning and Distillation"**
 
 VAPD is a **One-to-Many** framework that derives lightweight, hardware-optimized LLM variants from a single vertical foundation model via structured pruning and knowledge distillation. It eliminates the prohibitive cost of per-scale Continued Pre-training (CPT), enabling industrial-scale production of vertical-domain LLM families.
@@ -30,7 +30,7 @@ Since July 2025, VAPD has powered Sangfor Technologies' production XDR through f
 
 ### Case Studies
 - [`case_studies/vapd_vs_baseline.md`](case_studies/vapd_vs_baseline.md) — Qualitative comparison: VAPD vs. CPT+SFT vs. SFT on a Command Injection instance
-- [`case_studies/encrypted_webshell.md`](case_studies/encrypted_webshell.md) *(coming soon)* — Encrypted Webshell detection case study
+- [`case_studies/encrypted_webshell.md`](case_studies/encrypted_webshell.md) — Encrypted Webshell detection in Sangfor Athena XDR
 
 ### Code *(coming soon)*
 - `vapd/pruning/` — Taylor importance estimation, dependency-aware C→Dh pruning, mixed-domain calibration
@@ -80,18 +80,9 @@ See Section 3 of the paper for the full methodology.
 
 ---
 
-## 📄 Citation
+## ⭐ Support
 
-If you find VAPD useful in your research or applications, please cite:
-
-```bibtex
-@inproceedings{ming2026vapd,
-  title     = {From One to Many: Efficient Production and Deployment of Vertical LLM Families via Pruning and Distillation},
-  author    = {Ming, Cong and Liang, Zheming and Chu, Qi and Liu, Bin and Gong, Tao and Yu, Nenghai and Xiang, Yingfei and Yang, Ronghai},
-  booktitle = {Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM)},
-  year      = {2026}
-}
-```
+If you find VAPD useful, please consider giving the repo a star — it helps others discover the work.
 
 ---
 

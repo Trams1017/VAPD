@@ -140,4 +140,4 @@ For deployment topology, throughput/latency measurements, and the hardware-adapt
 - 🧬 [`additional_results.md`](additional_results.md) — Supplementary results including the Mistral-4.5B variant
 - 🏥 [`medical_evaluation.md`](medical_evaluation.md) — Cross-domain evaluation on MLEC-QA
 - 🔍 [`../case_studies/vapd_vs_baseline.md`](../case_studies/vapd_vs_baseline.md) — VAPD vs. CPT+SFT vs. SFT qualitative comparison
-- 🛡️ [`../case_studies/encrypted_webshell.md`](../case_studies/encrypted_webshell.md) — Encrypted Webshell detection *(coming soon)*
+- 🛡️ [`../case_studies/encrypted_webshell.md`](../case_studies/encrypted_webshell.md) — Encrypted Webshell detection
