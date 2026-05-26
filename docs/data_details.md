@@ -57,7 +57,7 @@ The ATD dataset uses standardized HTTP request templates with randomized payload
 **Input template:**
 
 <p align="center">
-  <img src="figures/atd_template.png" width="400">
+  <img src="figures/atd_template.png" width="300">
   <br>
   <em>ATD prompt template, showing the system instruction, the list of 13 candidate attack types, and the placeholder for the HTTP request log.</em>
 </p>
@@ -86,7 +86,7 @@ The dataset size matches ATD because ARPD inputs incorporate ATD's final outputs
 **Input template:**
 
 <p align="center">
-  <img src="figures/arpd_template.png" width="400">
+  <img src="figures/arpd_template.png" width="300">
   <br>
   <em>ARPD prompt template, showing the instruction, the attack type input (from ATD's output), the HTTP request/response placeholders, and the dual-tag output format (attack result + analysis).</em>
 </p>

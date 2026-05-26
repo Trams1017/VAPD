@@ -37,7 +37,7 @@ The individual metrics â€” weighted precision/recall (ATD) and accuracy (ARPD) â
 ### 3.1 ATD Example
 
 <p align="center">
-  <img src="figures/atd_example.png" width="400">
+  <img src="figures/atd_example.png" width="300">
   <br>
   <em>An ATD task instance representing a Command Injection attack. The malicious <strong>Payload</strong> (<code>system('whoami');</code>) injected into the <code>id</code> parameter is highlighted. (Sensitive information has been removed.)</em>
 </p>
@@ -45,7 +45,7 @@ The individual metrics â€” weighted precision/recall (ATD) and accuracy (ARPD) â
 ### 3.2 ARPD Example
 
 <p align="center">
-  <img src="figures/arpd_example.png" width="400">
+  <img src="figures/arpd_example.png" width="300">
   <br>
   <em>An ARPD task instance representing a Command Injection attack with a SUCCESS outcome. Annotations highlight the input <strong>Attack Type</strong> (from ATD), the malicious <strong>Payload</strong>, and the full HTTP request/response. The string <code>www-data</code> in the response body is the diagnostic signal for successful command execution. (Sensitive information has been removed.)</em>
 </p>
