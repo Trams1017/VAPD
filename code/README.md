@@ -35,19 +35,19 @@ The CLI flags in `prune.py` expose the two ablation axes reported in
 the paper:
 
 ```bash
-# VAPD default (paper Table 6 row 1; Table 8 row 1)
+# VAPD default
 python prune.py --importance taylor --order embed,head_dim,mlp
 
-# D_h → head_dim → C ablation (paper Table 6 row 2)
+# D_h → head_dim → C ablation
 python prune.py --importance taylor --order mlp,head_dim,embed
 
-# Importance ablation (paper Table 8)
+# Importance ablation
 python prune.py --importance random
 python prune.py --importance l1
 python prune.py --importance l2
 ```
 
-The α ablation for distillation (paper Table 7) is exposed via the
+The α ablation for distillation is exposed via the
 `--alpha` flag in `distillation_trainer.py`.
 
 ## Dependencies
