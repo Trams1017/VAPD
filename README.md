@@ -21,7 +21,7 @@ The conventional approach is to run CPT independently for each scale. For a 5-va
 **VAPD breaks this `O(N)` cost barrier**, reducing total family cost to **5,567 GPU-hours (61.4% reduction)** and **marginal per-variant cost by 97% (2,747 → 81 GPU-hours)**, while matching or exceeding the accuracy of the conventional CPT-per-scale pipeline.
 
 <p align="center">
-  <img src="docs/figures/framework_overview.png" width="450">
+  <img src="docs/figures/framework_overview.png" width="550">
   <br>
   <em>Conventional adaptation (left) performs full-scale CPT independently for every target size — an O(N) training problem. VAPD (right) trains a single high-performance vertical teacher, then derives every smaller variant from it via structured pruning and knowledge distillation — collapsing the cost to O(1).</em>
 </p>
@@ -50,7 +50,7 @@ VAPD's design starts from this observation and addresses it through three coordi
 
 We use first-order Taylor expansion `|∇_w L · w|` instead of activation magnitude — gradient sensitivity decouples importance from numerical weight, allowing low-magnitude but high-impact domain neurons to be preserved.
 
-Critically, the calibration data on which gradients are computed is **a 3:1 mixture of domain-specific and general-domain instances**. The domain subset anchors the gradient to the target task; the general subset acts as a regularizer. The result: domain-specialized parameters get amplified gradients and are shielded from removal, while generic parameters with attenuated gradients are preferentially discarded.
+Critically, the calibration data on which gradients are computed is **a mixture of domain-specific and general-domain instances**. The domain subset anchors the gradient to the target task; the general subset acts as a regularizer. The result: domain-specialized parameters get amplified gradients and are shielded from removal, while generic parameters with attenuated gradients are preferentially discarded.
 
 ### 2. Dependency-aware pruning order
 
