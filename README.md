@@ -92,25 +92,54 @@ See [Section 3 of the paper](#-citation--paper) for the full methodology and [`d
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Using the Code
 
-> 🚧 Code and detailed instructions are being released progressively. Check back for updates.
+The implementation is organized as two standalone modules that mirror the methodological stages in the paper. See [`code/README.md`](code/README.md) for the full code walkthrough and ablation reproduction commands.
 
-### Installation
+### Dependencies
+
+VAPD builds on open-source frameworks:
+- [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) — training infrastructure (data loading, distributed launch, base trainer)
+
+
 ```bash
-# coming soon
+pip install transformers==4.45.0    # 4.43.1 for Mistral
+pip install torch>=2.1
 ```
 
-### Pruning a 7B model to 3B
+### Stage 1: Pruning
+
 ```bash
-# coming soon
+python code/prune.py \
+    --model_name_or_path <your domain-adapted teacher> \
+    --dataset <your calibration dataset> \
+    --importance taylor \
+    --order embed,head_dim,mlp
 ```
 
-### Evaluation on NTD
+The teacher model and calibration dataset must be prepared in advance — see [Inputs to Prepare](#-inputs-to-prepare) below.
+
+### Stage 2: Distillation
+
 ```bash
-# coming soon
+python code/distillation_trainer.py \
+    --student <output of Stage 1> \
+    --teacher <same teacher used in Stage 1> \
+    --dataset <your domain SFT dataset> \
+    --alpha 1.00      # NTD default; use 0.75 for medical
 ```
 
+## 📦 Inputs to Prepare
+
+To apply VAPD to a new vertical domain, three inputs are required:
+
+1. **Domain-adapted teacher model** — a foundation LLM (e.g., Qwen-2.5-7B or Mistral-7B-v0.3) put through Continued Pre-training + Supervised Fine-tuning on the target domain. See [Section 4.1.4 of the paper](https://github.com/Trams1017/VAPD) for the hyperparameters used in our experiments.
+
+2. **Calibration dataset (mixture)** — a small set of instances drawn a ratio from domain-specific and general-domain data, used to compute Taylor importance scores. Empirically determined to be optimal in [`docs/data_details.md`](docs/data_details.md) and Section 4.3.3.
+
+3. **Domain SFT dataset** — the same dataset used for the teacher's SFT stage, reused to distill the pruned student.
+
+The repository documentation in [`docs/`](docs/) describes both in enough detail to construct equivalent inputs from one's own vertical-domain data.
 ---
 
 ## 🏭 Production Impact
