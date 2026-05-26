@@ -84,12 +84,10 @@ See [Section 3 of the paper](#-citation--paper) for the full methodology and [`d
 ### Case Studies
 - [`case_studies/vapd_vs_baseline.md`](case_studies/vapd_vs_baseline.md) — Qualitative comparison: VAPD vs. CPT+SFT vs. SFT on a Command Injection instance
 
-### Code *(coming soon)*
-- `vapd/pruning/` — Taylor importance estimation, dependency-aware C→Dh pruning, mixed-domain calibration
-- `vapd/distillation/` — α-mixed KL + CE distillation loss
-- `vapd/evaluation/` — ATD and ARPD evaluation metrics
-- `scripts/` — End-to-end training and evaluation entry points
-- `configs/` — Per-variant pruning and training configurations
+### Code
+- [`code/prune.py`](code/prune.py) — VAPD pruning: Taylor importance + dimension-ordered structured pruning (Section 3.2)
+- [`code/distillation_trainer.py`](code/distillation_trainer.py) — Hybrid α·KL + (1−α)·CE distillation trainer (Section 3.3)
+- [`code/README.md`](code/README.md) — Code scope, ablation reproduction, dependencies
 
 
 ---
