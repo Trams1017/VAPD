@@ -83,7 +83,6 @@ See [Section 3 of the paper](#-citation--paper) for the full methodology and [`d
 
 ### Case Studies
 - [`case_studies/vapd_vs_baseline.md`](case_studies/vapd_vs_baseline.md) — Qualitative comparison: VAPD vs. CPT+SFT vs. SFT on a Command Injection instance
-- [`case_studies/encrypted_webshell.md`](case_studies/encrypted_webshell.md) — Encrypted Webshell detection in Sangfor Athena XDR
 
 ### Code *(coming soon)*
 - `vapd/pruning/` — Taylor importance estimation, dependency-aware C→Dh pruning, mixed-domain calibration
