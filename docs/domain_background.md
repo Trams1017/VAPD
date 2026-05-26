@@ -129,8 +129,6 @@ For an explanation of why aggregate metrics alone are insufficient for vertical-
 
 NTD models derived via VAPD are integrated into **Sangfor Athena XDR** (Extended Detection and Response), serving millions of requests daily across cloud, on-premise, and edge deployments. Production performance metrics for each variant (detection rate, false positive rate, training cost) are reported in Table 10 of the paper.
 
-For deployment topology, throughput/latency measurements, and the hardware-adaptive sizing strategy, see [`deployment.md`](deployment.md) *(coming soon)*.
-
 ---
 
 ## Related Documents
